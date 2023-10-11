@@ -1,0 +1,106 @@
+{
+  "expo": {
+    "owner": "lkexpo",
+    "name": "Universal on the Lot",
+    "slug": "universal-on-the-lot",
+    "version": "1.3.9",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./src/assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#343434"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nbcuni.nbcsports.onthelot",
+      "buildNumber": "1.3.9",
+      "infoPlist": {
+        "UIRequiresFullScreen": true,
+        "NSWidgetWantsLocation": true,
+        "NSLocationDefaultAccuracyReduced": true,
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "App requires geolocation to improve the quality of the service",
+        "NSLocationAlwaysUsageDescription": "App requires geolocation to improve the quality of the service",
+        "NSLocationWhenInUseUsageDescription": "App requires geolocation to improve the quality of the service"
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k"
+      }
+    },
+    "android": {
+      "package": "com.nbcuni.nbcsports.onthelot",
+      "versionCode": 31,
+      "permissions": [
+        "FOREGROUND_SERVICE"
+      ],
+      "blockedPermissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "READ_PHONE_STATE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "READ_LOGS",
+        "CAMERA",
+        "ACCESS_MEDIA_LOCATION",
+        "READ_CONTACTS",
+        "RECORD_AUDIO",
+        "SYSTEM_ALERT_WINDOW",
+        "CAMERA",
+        "WRITE_CALENDAR",
+        "WRITE_SETTINGS",
+        "ACTIVITY_RECOGNITION",
+        "ACCESS_MEDIA_LOCATION",
+        "ADD_VOICEMAIL"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCvgzlIVC_hu6XD0SOu0NUM4jvEOneo4s0"
+        }
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./src/assets/images/favicon.png"
+    },
+    "extra": {
+      "API_URL": "https://www.universalstudioslot.com",
+      "eas": {
+        "projectId": "b05aeb60-881f-4cbb-b688-0dae6bc32fbc"
+      },
+      "IOS_MAP_KEY": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k",
+      "ANDROID_MAP_KEY": "AIzaSyCvgzlIVC_hu6XD0SOu0NUM4jvEOneo4s0",
+      "GOOGLE_MAPS_APIKEY_DIRECTIONS": "AIzaSyAatF6UjKOqASa3H_W5c1UpFPtiq6f1LZI"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://acme.com",
+          "asyncRoutes": "development"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
+          "isAndroidBackgroundLocationEnabled": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      "expo-build-properties"
+    ],
+    "experiments": {
+      "tsconfigPaths": true,
+      "typedRoutes": true
+    }
+  }
+}

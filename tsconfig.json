@@ -1,0 +1,26 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "target": "es6",
+    "strict": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "paths": {
+      "@/*": [
+        "./src/*",
+        "./src/components/*", 
+        "./src/constants/*", 
+        "./src/assets/*", 
+        "./src/app/*"
+      ]
+    },
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
+}
