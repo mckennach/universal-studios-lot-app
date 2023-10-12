@@ -1,9 +1,9 @@
 import { ScrollView, TouchableHighlight, StyleSheet, Dimensions, Platform } from "react-native"
 import { View } from "../Themed"
 import { ParagraphMediumText, ParagraphText } from "../StyledText"
-import Colors from "@/constants/Colors"
-import Layout from "@/constants/Layout"
-import { LocationProps } from "@/utils/types/map"
+import Colors from "../../constants/Colors"
+import Layout from "../../constants/Layout"
+import { LocationProps } from "../../utils/types/map"
 import { router,  } from "expo-router"
 
 const SearchOverlay = ({

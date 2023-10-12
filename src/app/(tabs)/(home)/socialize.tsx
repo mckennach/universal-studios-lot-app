@@ -7,10 +7,10 @@ import {
   TouchableOpacity,
   Linking,
 } from "react-native";
-import { Text, View } from "@/components/Themed";
-import Colors from "@/constants/Colors";
-import { LightText } from "@/components/StyledText";
-import Icons from "@/constants/Icons/Icons";
+import { Text, View } from "../../../components/Themed";
+import Colors from "../../../constants/Colors";
+import { LightText } from "../../../components/StyledText";
+import Icons from "../../../constants/Icons/Icons";
 
 
 interface SocializeScreenProps {

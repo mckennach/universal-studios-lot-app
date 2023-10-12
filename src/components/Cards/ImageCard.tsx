@@ -1,10 +1,10 @@
 import { View, Text } from "../Themed";
 import { StyleSheet, Image, TouchableHighlight, Linking } from "react-native";
 import { router, Link } from "expo-router";
-import Colors from "@/constants/Colors";
+import Colors from "../../constants/Colors";
 import { HeadingBoldText } from "../StyledText";
 import ProgressiveImage from "../Images/ProgressiveImage";
-import Icons from "@/constants/Icons/Icons";
+import Icons from "../../constants/Icons/Icons";
 
 
 const ImageCard = ({ image, title, link, item }: { image: string; title: string; link: string, item: any}) => {

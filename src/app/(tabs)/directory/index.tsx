@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
 import { router } from "expo-router";
 import { KeyboardAvoidingView, StyleSheet, FlatList, TouchableOpacity } from "react-native";
-import { HeadingBoldText, HeadingMediumText, StagesSmallText } from "@/components/StyledText";
-import { Text, View } from "@/components/Themed";
-import Icons from "@/constants/Icons/Icons";
-import Colors from "@/constants/Colors";
+import { HeadingBoldText, HeadingMediumText, StagesSmallText } from "../../../components/StyledText";
+import { Text, View } from "../../../components/Themed";
+import Icons from "../../../constants/Icons/Icons";
+import Colors from "../../../constants/Colors";
 import { SearchBar } from "@rneui/themed";
 
-import SearchStyles from "@/constants/SearchStyles";
-import type { Stage } from "@/utils/types/stages";
+import SearchStyles from "../../../constants/SearchStyles";
 
-import { logObject } from "@/utils/helpers";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 const fetchData = async () => {

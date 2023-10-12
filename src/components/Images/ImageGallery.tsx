@@ -2,9 +2,9 @@ import Swiper from "react-native-swiper";
 import ProgressiveImage from "./ProgressiveImage";
 import { View, Text } from "../Themed";
 import { StyleSheet } from "react-native";
-import Icons from "@/constants/Icons/Icons";
-import Colors from "@/constants/Colors";
-import { chunkMaxLength, logObject } from "@/utils/helpers";
+import Icons from "../../constants/Icons/Icons";
+import Colors from "../../constants/Colors";
+import { chunkMaxLength, logObject } from "../../utils/helpers";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 const ImageGallery = ({ data }: any) => {

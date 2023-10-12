@@ -6,7 +6,7 @@ import { StyleSheet } from 'react-native';
 import { Text as DefaultText, useColorScheme, View as DefaultView } from 'react-native';
 import RNModal from "react-native-modal";
 import { HeadingBoldText } from './StyledText';
-import Colors from '@/constants/Colors';
+import Colors from '../constants/Colors';
 
 type ThemeProps = {
   lightColor?: string;

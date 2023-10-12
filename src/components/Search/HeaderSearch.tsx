@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput } from "react-native"
 import { View, Text } from "../Themed";
-import Colors from "@/constants/Colors";
-import Icons from "@/constants/Icons/Icons";
+import Colors from "../../constants/Colors";
+import Icons from "../../constants/Icons/Icons";
 const HeaderSearch = (
     { 
         searchTerm, 

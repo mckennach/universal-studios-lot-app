@@ -13,7 +13,23 @@
         "./src/components/*", 
         "./src/constants/*", 
         "./src/assets/*", 
+        "./src/app/*",
+        "./src/constants/Icons/*",
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@app/*": [
         "./src/app/*"
+      ],
+      "@icons/*": [
+        "./src/constants/Icons/*"
       ]
     },
   },

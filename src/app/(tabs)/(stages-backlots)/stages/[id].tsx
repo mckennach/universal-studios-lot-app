@@ -1,14 +1,14 @@
 import { StyleSheet, TouchableOpacity, Share } from "react-native";
 import { useLocalSearchParams, useGlobalSearchParams, Link } from "expo-router";
-import { View } from "@/components/Themed";
+import { View } from "../../../../components/Themed";
 import {
   HTML,
   HeadingMediumText,
   HeadingBoldText,
-} from "@/components/StyledText";
+} from "../../../../components/StyledText";
 
-import Colors from "@/constants/Colors";
-import Icons from "@/constants/Icons/Icons";
+import Colors from "../../../../constants/Colors";
+import Icons from "../../../../constants/Icons/Icons";
 import { WebView } from 'react-native-webview'; //Add this to your imports
 
 

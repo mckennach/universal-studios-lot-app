@@ -1,7 +1,7 @@
 import { Text } from "@/components/Themed";
 import { Stack } from "expo-router";
-import HeaderLogo from "@/constants/Icons/HeaderLogo";
-import Colors from "@/constants/Colors";
+import HeaderLogo from "../../../constants/Icons/HeaderLogo";
+import Colors from "../../../constants/Colors";
 import { usePathname } from "expo-router";
 const HomeLayout = () => {
   const pathname = usePathname();

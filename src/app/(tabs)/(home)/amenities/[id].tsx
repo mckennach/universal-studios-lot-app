@@ -1,16 +1,10 @@
 import { StyleSheet, TouchableOpacity, Share } from "react-native";
 import { useLocalSearchParams, useGlobalSearchParams, Link } from "expo-router";
-import { View, Text } from "@/components/Themed";
-import {
-  HTML,
-  HeadingMediumText,
-  HeadingBoldText,
-} from "@/components/StyledText";
-import { logObject } from "@/utils/helpers";
-import Colors from "@/constants/Colors";
-import Icons from "@/constants/Icons/Icons";
-import { WebView } from "react-native-webview"; //Add this to your imports
-import AmenitiesDetail from "@/components/DetailPages/AmenitiesDetail";
+
+
+import Colors from "../../../../constants/Colors";
+
+import AmenitiesDetail from "../../../../components/DetailPages/AmenitiesDetail";
 
 export default function AmenitiesDetailScreen() {
   const data = useLocalSearchParams();

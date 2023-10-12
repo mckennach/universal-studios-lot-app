@@ -1,6 +1,9 @@
 PODS:
+  - ASN1Decoder (1.9.0)
   - boost (1.76.0)
   - DoubleConversion (1.1.6)
+  - EASClient (0.6.0):
+    - ExpoModulesCore
   - EXApplication (5.3.1):
     - ExpoModulesCore
   - EXConstants (14.4.2):
@@ -89,6 +92,17 @@ PODS:
     - ExpoModulesCore
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
+  - EXStructuredHeaders (3.3.0)
+  - EXUpdates (0.18.16):
+    - ASN1Decoder (~> 1.8)
+    - EASClient
+    - EXManifests
+    - ExpoModulesCore
+    - EXStructuredHeaders
+    - EXUpdatesInterface
+    - RCT-Folly (= 2021.07.22.00)
+    - ReachabilitySwift
+    - React-Core
   - EXUpdatesInterface (0.10.1)
   - FBLazyVector (0.72.5)
   - FBReactNativeSpec (0.72.5):
@@ -100,30 +114,6 @@ PODS:
     - ReactCommon/turbomodule/core (= 0.72.5)
   - fmt (6.2.1)
   - glog (0.3.5)
-  - Google-Maps-iOS-Utils (4.1.0):
-    - Google-Maps-iOS-Utils/Clustering (= 4.1.0)
-    - Google-Maps-iOS-Utils/Geometry (= 4.1.0)
-    - Google-Maps-iOS-Utils/GeometryUtils (= 4.1.0)
-    - Google-Maps-iOS-Utils/Heatmap (= 4.1.0)
-    - Google-Maps-iOS-Utils/QuadTree (= 4.1.0)
-    - GoogleMaps
-  - Google-Maps-iOS-Utils/Clustering (4.1.0):
-    - Google-Maps-iOS-Utils/QuadTree
-    - GoogleMaps
-  - Google-Maps-iOS-Utils/Geometry (4.1.0):
-    - GoogleMaps
-  - Google-Maps-iOS-Utils/GeometryUtils (4.1.0):
-    - GoogleMaps
-  - Google-Maps-iOS-Utils/Heatmap (4.1.0):
-    - Google-Maps-iOS-Utils/QuadTree
-    - GoogleMaps
-  - Google-Maps-iOS-Utils/QuadTree (4.1.0):
-    - GoogleMaps
-  - GoogleMaps (7.4.0):
-    - GoogleMaps/Maps (= 7.4.0)
-  - GoogleMaps/Base (7.4.0)
-  - GoogleMaps/Maps (7.4.0):
-    - GoogleMaps/Base
   - hermes-engine (0.72.5):
     - hermes-engine/Pre-built (= 0.72.5)
   - hermes-engine/Pre-built (0.72.5)
@@ -151,6 +141,7 @@ PODS:
     - FBLazyVector (= 0.72.5)
     - RCTRequired (= 0.72.5)
     - React-Core (= 0.72.5)
+  - ReachabilitySwift (5.0.0)
   - React (0.72.5):
     - React-Core (= 0.72.5)
     - React-Core/DevSupport (= 0.72.5)
@@ -429,10 +420,6 @@ PODS:
   - React-jsinspector (0.72.5)
   - React-logger (0.72.5):
     - glog
-  - react-native-google-maps (1.7.1):
-    - Google-Maps-iOS-Utils (= 4.1.0)
-    - GoogleMaps (= 7.4.0)
-    - React-Core
   - react-native-maps (1.7.1):
     - React-Core
   - react-native-onetrust-cmp (202306.2.0):
@@ -571,6 +558,7 @@ PODS:
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - EASClient (from `../node_modules/expo-eas-client/ios`)
   - EXApplication (from `../node_modules/expo-application/ios`)
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
@@ -589,6 +577,8 @@ DEPENDENCIES:
   - ExpoSystemUI (from `../node_modules/expo-system-ui/ios`)
   - ExpoWebBrowser (from `../node_modules/expo-web-browser/ios`)
   - EXSplashScreen (from `../node_modules/expo-splash-screen/ios`)
+  - EXStructuredHeaders (from `../node_modules/expo-structured-headers/ios`)
+  - EXUpdates (from `../node_modules/expo-updates/ios`)
   - EXUpdatesInterface (from `../node_modules/expo-updates-interface/ios`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -611,7 +601,6 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
-  - react-native-google-maps (from `/Users/chris/Documents/Personal/apps_react-native/universal-on-the-lot/node_modules/react-native-maps`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-onetrust-cmp (from `../node_modules/react-native-onetrust-cmp`)
   - react-native-render-html (from `../node_modules/react-native-render-html`)
@@ -641,11 +630,11 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - ASN1Decoder
     - fmt
-    - Google-Maps-iOS-Utils
-    - GoogleMaps
     - libevent
     - OneTrust-CMP-XCFramework
+    - ReachabilitySwift
     - SocketRocket
 
 EXTERNAL SOURCES:
@@ -653,6 +642,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  EASClient:
+    :path: "../node_modules/expo-eas-client/ios"
   EXApplication:
     :path: "../node_modules/expo-application/ios"
   EXConstants:
@@ -689,6 +680,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-web-browser/ios"
   EXSplashScreen:
     :path: "../node_modules/expo-splash-screen/ios"
+  EXStructuredHeaders:
+    :path: "../node_modules/expo-structured-headers/ios"
+  EXUpdates:
+    :path: "../node_modules/expo-updates/ios"
   EXUpdatesInterface:
     :path: "../node_modules/expo-updates-interface/ios"
   FBLazyVector:
@@ -730,8 +725,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
-  react-native-google-maps:
-    :path: "/Users/chris/Documents/Personal/apps_react-native/universal-on-the-lot/node_modules/react-native-maps"
   react-native-maps:
     :path: "../node_modules/react-native-maps"
   react-native-onetrust-cmp:
@@ -786,8 +779,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  ASN1Decoder: 4f4bbcaf1d1b8be56daa3280e82863a607f5bda9
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
+  EASClient: 49f8ea858204eb4844d9fb386e5fb7920aee2e30
   EXApplication: 042aa2e3f05258a16962ea1a9914bf288db9c9a1
   EXConstants: ce5bbea779da8031ac818c36bea41b10e14d04e1
   EXFileSystem: 2b826a3bf1071a4b80a8457e97124783d1ac860e
@@ -806,19 +801,20 @@ SPEC CHECKSUMS:
   ExpoSystemUI: fa4854e3226e87f86d3383570264c6e4e90bc782
   ExpoWebBrowser: 2c788f9c07718a780fe6d8bf2f6195c47609faaa
   EXSplashScreen: c0e7f2d4a640f3b875808ed0b88575538daf6d82
+  EXStructuredHeaders: 324cc3130571d2696357fafd8be7fd9a0b5fdf6e
+  EXUpdates: f4cb5c6782ad1635fa853cb5251677040a9ed584
   EXUpdatesInterface: 82ed48d417cdcd376c12ca1c2ce390d35500bed6
   FBLazyVector: 71803c074f6325f10b5ec891c443b6bbabef0ca7
   FBReactNativeSpec: 448e08a759d29a96e15725ae532445bf4343567c
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
-  Google-Maps-iOS-Utils: 3343332b18dfd5be8f1f44edd7d481ace3da4d9a
-  GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
   hermes-engine: f6cf92a471053245614d9d8097736f6337d5b86c
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OneTrust-CMP-XCFramework: 9f0c2c725f38cc65cf94037fa7811028d6ae7fad
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTRequired: df81ab637d35fac9e6eb94611cfd20f0feb05455
   RCTTypeSafety: 4636e4a36c7c2df332bda6d59b19b41c443d4287
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   React: e0cc5197a804031a6c53fb38483c3485fcb9d6f3
   React-callinvoker: 1a635856fe0c3d8b13fccd4ed7e76283b99b0868
   React-Codegen: 78d61f981cccc68a771a598f71621cb7db14b04c
@@ -831,7 +827,6 @@ SPEC CHECKSUMS:
   React-jsiexecutor: ff70a72027dea5cc7d71cfcc6fad7f599f63987a
   React-jsinspector: aef73cbd43b70675f572214d10fa438c89bf11ba
   React-logger: 2e4aee3e11b3ec4fa6cfd8004610bbb3b8d6cca4
-  react-native-google-maps: dd12cdd86b8e3fedbbb671676aedaa2f656e2ccd
   react-native-maps: 667f9b975549c6fa9b1631bf859440f68ebd3b8f
   react-native-onetrust-cmp: a3ad32b82edbc5c216b4e2abf14e25841f9882ac
   react-native-render-html: 984dfe2294163d04bf5fe25d7c9f122e60e05ebe
@@ -860,6 +855,6 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
 
-PODFILE CHECKSUM: 4828ebf3ba105c9085118fa9780166eff50acbe1
+PODFILE CHECKSUM: 93fe4395079562e030a2435db6bf1a6421fa431d
 
 COCOAPODS: 1.11.3

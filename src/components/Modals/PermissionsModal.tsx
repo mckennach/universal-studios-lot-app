@@ -1,7 +1,7 @@
 import { TouchableOpacity, StyleSheet } from "react-native";
 import * as Location from "expo-location";
-import Colors from "@/constants/Colors";
-import { AppContextProps } from "@/app/_layout";
+import Colors from "../../constants/Colors";
+import { AppContextProps } from "../../app/_layout";
 import { View, Text, Modal } from "../Themed";
 import { HeadingBoldText, ParagraphText } from "../StyledText";
 

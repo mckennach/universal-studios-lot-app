@@ -7,11 +7,11 @@ import {
   HeadingBoldText,
 } from "@/components/StyledText";
 import { logObject } from "@/utils/helpers";
-import Colors from "@/constants/Colors";
-import Icons from "@/constants/Icons/Icons";
+import Colors from "../../../../constants/Colors";
+import Icons from "@constants/Icons/Icons";
 import { WebView } from "react-native-webview"; //Add this to your imports
 import DefaultDetail from "@/components/DetailPages/DefaultDetail";
-import DiningDetail from "@/components/DetailPages/DiningDetail";
+import DiningDetail from "../../../../components/DetailPages/DiningDetail";
 export default function DiningDetailScreen() {
   const data = useLocalSearchParams();
 

@@ -6,10 +6,10 @@ import {
   Linking,
   Dimensions,
 } from "react-native";
-import Colors from "@/constants/Colors";
+import Colors from "../../constants/Colors";
 import { HeadingBoldText, HTML } from "../StyledText";
-import Layout from "@/constants/Layout";
-import { logObject, formatParagraph, formatTextNewLineToBreaks } from "@/utils/helpers";
+import Layout from "../../constants/Layout";
+import { logObject, formatParagraph, formatTextNewLineToBreaks } from "../../utils/helpers";
 import ImageGallery from "../Images/ImageGallery";
 import { Link } from "expo-router";
 import ProgressiveImage from "../Images/ProgressiveImage";

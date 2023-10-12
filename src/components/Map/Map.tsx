@@ -11,20 +11,20 @@ import { convertDistance, getDistance, getPreciseDistance } from "geolib";
 import * as Location from "expo-location";
 import MapViewDirections from "react-native-maps-directions";
 // Components
-import { View, Text } from "@/Themed";
-import Icons from "@/constants/Icons/Icons";
+import { View, Text } from "../Themed";
+import Icons from "../../constants/Icons/Icons";
 import { SearchBar } from "@rneui/themed";
 
 
 // Constants
-import Colors from "@/constants/Colors";
-import Layout from "@/constants/Layout";
-import SearchStyles from "@/constants/SearchStyles";
-import { MapStyles } from "@/constants/MapStyles";
+import Colors from "../../constants/Colors";
+import Layout from "../../constants/Layout";
+import SearchStyles from "../../constants/SearchStyles";
+import { MapStyles } from "../../constants/MapStyles";
 
 // Utils
-import type { Coordinates, LocationProps, Region, UserLocationProps } from "@/utils/types/map";
-import { logObject } from "@/utils/helpers";
+import type { Coordinates, LocationProps, Region, UserLocationProps } from "../../utils/types/map";
+import { logObject } from "../../utils/helpers";
 import SearchOverlay from "./SearchOverlay";
 import LocationDetails from "./LocationDetails";
 
@@ -35,7 +35,7 @@ const Map = ({ data, activeData }: { data: LocationProps[] | null, activeData?: 
   const ASPECT_RATIO = Layout.window.width / Layout.window.height;
   const LATITUDE_DELTA = 0.035;
   const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-  const markerImage = require("@/assets/images/pin.png");
+  const markerImage = require("../../assets/images/pin.png");
   const zoomDelta = 0.005;
   const [apiKey, setApiKey] = useState<string>("");
 

@@ -1,12 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { StyleSheet } from "react-native";
 // import { View, Text } from "@/components/Themed";
-import Map from "@/components/Map/Map";
+import Map from "../../../components/Map/Map";
 import { logObject } from "@/utils/helpers";
-import type { LocationProps } from "@/utils/types/map";
-import MapDisabled from "@/components/Map/MapDisabled";
-import PermissionsModal from "@/components/Modals/PermissionsModal";
-import { AppContext, AppContextProps } from "@/app/_layout";
+import type { LocationProps } from "../../../utils/types/map";
+import MapDisabled from "../../../components/Map/MapDisabled";
+import PermissionsModal from "../../../components/Modals/PermissionsModal";
+import { AppContext, AppContextProps } from "../../../app/_layout";
 
 
 const { EXPO_PUBLIC_API_URL } = process.env;

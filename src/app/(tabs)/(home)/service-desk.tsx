@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
 import { StyleSheet } from "react-native";
-import { Text, View } from "@/components/Themed";
+import { Text, View } from "../../../components/Themed";
 import { logObject } from "@/utils/helpers";
 // import DefaultDetail from "@/components/DetailPages/DefaultDetail";
-import ServiceDetail from "@/components/DetailPages/ServiceDetail";
+import ServiceDetail from "../../../components/DetailPages/ServiceDetail";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 const fetchData = async () => {

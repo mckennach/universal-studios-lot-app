@@ -7,10 +7,10 @@ import {
   HeadingBoldText,
 } from "@/components/StyledText";
 import { logObject } from "@/utils/helpers";
-import Colors from "@/constants/Colors";
-import Icons from "@/constants/Icons/Icons";
+import Colors from "../../../../constants/Colors";
+import Icons from "@constants/Icons/Icons";
 import { WebView } from "react-native-webview"; //Add this to your imports
-import DefaultDetail from "@/components/DetailPages/DefaultDetail";
+import DefaultDetail from "../../../../components/DetailPages/DefaultDetail";
 
 export default function BacklotDetailScreen() {
     const data = useLocalSearchParams();

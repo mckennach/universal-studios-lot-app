@@ -6,14 +6,14 @@ import {
   Linking,
   Dimensions,
 } from "react-native";
-import Colors from "@/constants/Colors";
+import Colors from "../../constants/Colors";
 import { HeadingBoldText, HTML } from "../StyledText";
-import Layout from "@/constants/Layout";
+import Layout from "../../constants/Layout";
 import {
   logObject,
   formatTextNewLineToBreaks,
   contactUrl,
-} from "@/utils/helpers";
+} from "../../utils/helpers";
 import ImageGallery from "../Images/ImageGallery";
 
 const AmenitiesDetail = ({ data }: any) => {

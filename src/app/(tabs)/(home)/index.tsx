@@ -1,6 +1,6 @@
 import { useEffect, useContext } from "react";
 import * as Location from "expo-location";
-import { AppContext, AppContextProps } from "@/app/_layout";
+import { AppContext, AppContextProps } from "../../../app/_layout";
 import {
   StyleSheet,
   FlatList,
@@ -8,11 +8,11 @@ import {
   Linking,
 } from "react-native";
 import { Route, router, Href, Link, Redirect, usePathname } from "expo-router";
-import Layout from "@/constants/Layout";
-import { Text, View } from "@/components/Themed";
-import Colors from "@/constants/Colors";
-import { HeadingMediumText } from "@/components/StyledText";
-import PermissionsModal from "@/components/Modals/PermissionsModal";
+import Layout from "../../../constants/Layout";
+import { Text, View } from "../../../components/Themed";
+import Colors from "../../../constants/Colors";
+import { HeadingMediumText } from "../../../components/StyledText";
+import PermissionsModal from "../../../components/Modals/PermissionsModal";
 
 interface ItemData {
   key: string;

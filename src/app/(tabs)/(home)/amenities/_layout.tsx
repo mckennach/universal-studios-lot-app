@@ -1,8 +1,7 @@
-import { TouchableOpacity } from "react-native";
-import { Text } from "@/components/Themed";
+
 import { Stack } from "expo-router";
-import HeaderLogo from "@/constants/Icons/HeaderLogo";
-import Colors from "@/constants/Colors";
+import HeaderLogo from "../../../../constants/Icons/HeaderLogo";
+import Colors from "../../../../constants/Colors";
 
 const HomeLayout = () => {
   return (

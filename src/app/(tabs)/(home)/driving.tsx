@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 
 import { StyleSheet } from "react-native";
 
-import { Text, View } from "@/components/Themed";
-import { logObject } from "@/utils/helpers";
+import { Text, View } from "../../../components/Themed";
+
 // import DefaultDetail from "@/components/DetailPages/DefaultDetail";
-import DrivingDetail from "@/components/DetailPages/DrivingDetail";
+import DrivingDetail from "../../../components/DetailPages/DrivingDetail";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 
