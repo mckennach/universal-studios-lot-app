@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { StyleSheet, FlatList } from "react-native";
 
-import Colors from "@/constants/Colors";
-import { Text, View } from "@/components/Themed";
-import ImageCard from "@/components/Cards/ImageCard";
+import Colors from "../../../../constants/Colors";
+import { Text, View } from "../../../../components/Themed";
+import ImageCard from "../../../../components/Cards/ImageCard";
 import { logObject } from "@/utils/helpers";
 const { EXPO_PUBLIC_API_URL } = process.env;
 

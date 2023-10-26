@@ -1,9 +1,9 @@
-import { LocationProps } from '@/utils/types/map';
+import { LocationProps } from '../../utils/types/map';
 import { View, Text } from '../Themed';
 import { StyleSheet } from 'react-native';
 import { TouchableHighlight } from 'react-native-gesture-handler';
-import Colors from '@/constants/Colors';
-import Layout from '@/constants/Layout';
+import Colors from '../../constants/Colors';
+import Layout from '../../constants/Layout';
 const LocationDetails = ({ 
     activeLocation, 
     detailVisible, 

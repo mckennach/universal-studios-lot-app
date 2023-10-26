@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 import { router } from "expo-router";
 import { StyleSheet, FlatList, TouchableOpacity } from "react-native";
-import { HeadingBoldText, StagesSmallText } from "@/components/StyledText";
+import { HeadingBoldText, StagesSmallText } from "../../../../components/StyledText";
 
-import { Text, View } from "@/components/Themed";
-import Icons from "@/constants/Icons/Icons";
-import Colors from "@/constants/Colors";
+import { Text, View } from "../../../../components/Themed";
+import Icons from "../../../../constants/Icons/Icons";
+import Colors from "../../../../constants/Colors";
 import Constants from "expo-constants";
 
 import type { Stage } from "@/utils/types/stages";

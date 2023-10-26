@@ -1,11 +1,11 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import TabBarIcon from "@/Icons/TabBarIcon";
+import TabBarIcon from "../../../constants/Icons/TabBarIcon";
 import { Link, Tabs } from "expo-router";
 import { Pressable, useColorScheme } from "react-native";
 
-import Colors from "@/Colors";
-import Layout from "@/Layout";
-import HeaderLogo from "@/Icons/HeaderLogo";
+import Colors from "../../../constants/Colors";
+
+import HeaderLogo from "../../../constants/Icons/HeaderLogo";
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */

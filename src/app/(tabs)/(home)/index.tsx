@@ -1,18 +1,19 @@
 import { useEffect, useContext } from "react";
 import * as Location from "expo-location";
-import { AppContext, AppContextProps } from "@/app/_layout";
+import { AppContext, AppContextProps } from "../../../app/_layout";
 import {
   StyleSheet,
   FlatList,
   TouchableHighlight,
   Linking,
+  Alert
 } from "react-native";
 import { Route, router, Href, Link, Redirect, usePathname } from "expo-router";
-import Layout from "@/constants/Layout";
-import { Text, View } from "@/components/Themed";
-import Colors from "@/constants/Colors";
-import { HeadingMediumText } from "@/components/StyledText";
-import PermissionsModal from "@/components/Modals/PermissionsModal";
+import Layout from "../../../constants/Layout";
+import { Text, View } from "../../../components/Themed";
+import Colors from "../../../constants/Colors";
+import { HeadingMediumText } from "../../../components/StyledText";
+import PermissionsModal from "../../../components/Modals/PermissionsModal";
 
 interface ItemData {
   key: string;
@@ -39,7 +40,7 @@ const DATA: ItemData[] = [
   },
   {
     key: "3",
-    title: "DRIVING ON THE LOT",
+    title: "DRIVING ON THE LOT!",
     navigation: "Driving",
     url: "/driving",
     linkItem: false,
@@ -91,9 +92,11 @@ const DATA: ItemData[] = [
 type ItemProps = { title: string; linkItem?: boolean; url: any };
 
 const handlePress = async (url: any) => {
-  const supported = await Linking.canOpenURL(url);
-  console.log(supported);
-  if (supported) {
+
+  // const supported = await Linking.canOpenURL(encodeURI(url));
+  
+  
+  if (url.indexOf('http://') === 0 || url.indexOf('https://') === 0) {
     await Linking.openURL(url);
   } else {
     router.push(url);
@@ -118,7 +121,7 @@ export default function HomeScreen() {
     useEffect(() => {
       (async () => {
         const { granted } = await Location.getForegroundPermissionsAsync();
-        console.log(granted);
+       
         if (!granted && setLocationEnabled && setIsModalOpen) {
           setLocationEnabled(false);
           setIsModalOpen(true);

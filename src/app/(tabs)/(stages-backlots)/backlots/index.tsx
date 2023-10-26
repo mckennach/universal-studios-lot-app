@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { KeyboardAvoidingView, StyleSheet, FlatList } from "react-native";
 
-import Colors from "@/constants/Colors";
-import { Text, View } from "@/components/Themed";
-import ImageCard from "@/components/Cards/ImageCard";
+import Colors from "../../../../constants/Colors";
+import { Text, View } from "../../../../components/Themed";
+import ImageCard from "../../../../components/Cards/ImageCard";
 
-import SearchStyles from "@/constants/SearchStyles";
+import SearchStyles from "../../../../constants/SearchStyles";
 import { SearchBar } from "@rneui/themed";
-import Icons from "@/constants/Icons/Icons";
-import { ParagraphText } from "@/components/StyledText";
-import { BacklotProps } from "@/utils/types/backlots";
+import Icons from "../../../../constants/Icons/Icons";
+import { ParagraphText } from "../../../../components/StyledText";
+import { BacklotProps } from "../../../../utils/types/backlots";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 

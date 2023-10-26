@@ -1,0 +1,281 @@
+--------- beginning of crash
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: FATAL EXCEPTION: create_react_context
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: Process: com.nbcuni.nbcsports.onthelot, PID: 2795
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/onetrust/otpublishers/headless/Public/OTPublishersHeadlessSDK;
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.onetrust.OneTrust.<init>(OneTrust.java:41)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.onetrust.OTPublishersNativeSDKPackage.createNativeModules(OTPublishersNativeSDKPackage.java:21)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.ReactPackageHelper.getNativeModuleIterator(ReactPackageHelper.java:42)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.NativeModuleRegistryBuilder.processPackage(NativeModuleRegistryBuilder.java:42)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackage(ReactInstanceManager.java:1467)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackages(ReactInstanceManager.java:1438)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.createReactContext(ReactInstanceManager.java:1340)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.-$$Nest$mcreateReactContext(Unknown Source:0)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager$5.run(ReactInstanceManager.java:1111)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK
+10-20 13:40:25.233  2795  2941 E AndroidRuntime: 	... 10 more
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: FATAL EXCEPTION: create_react_context
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: Process: com.nbcuni.nbcsports.onthelot, PID: 6263
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/onetrust/otpublishers/headless/Public/OTPublishersHeadlessSDK;
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.onetrust.OneTrust.<init>(OneTrust.java:41)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.onetrust.OTPublishersNativeSDKPackage.createNativeModules(OTPublishersNativeSDKPackage.java:21)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.ReactPackageHelper.getNativeModuleIterator(ReactPackageHelper.java:42)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.NativeModuleRegistryBuilder.processPackage(NativeModuleRegistryBuilder.java:42)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackage(ReactInstanceManager.java:1467)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackages(ReactInstanceManager.java:1438)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.createReactContext(ReactInstanceManager.java:1340)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.-$$Nest$mcreateReactContext(Unknown Source:0)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager$5.run(ReactInstanceManager.java:1111)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK
+10-20 13:53:23.433  6263  6310 E AndroidRuntime: 	... 10 more
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: FATAL EXCEPTION: create_react_context
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: Process: com.nbcuni.nbcsports.onthelot, PID: 6706
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/onetrust/otpublishers/headless/Public/OTPublishersHeadlessSDK;
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.onetrust.OneTrust.<init>(OneTrust.java:41)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.onetrust.OTPublishersNativeSDKPackage.createNativeModules(OTPublishersNativeSDKPackage.java:21)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.ReactPackageHelper.getNativeModuleIterator(ReactPackageHelper.java:42)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.NativeModuleRegistryBuilder.processPackage(NativeModuleRegistryBuilder.java:42)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackage(ReactInstanceManager.java:1467)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackages(ReactInstanceManager.java:1438)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.createReactContext(ReactInstanceManager.java:1340)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.-$$Nest$mcreateReactContext(Unknown Source:0)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager$5.run(ReactInstanceManager.java:1111)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK
+10-20 13:59:56.369  6706  6747 E AndroidRuntime: 	... 10 more
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: FATAL EXCEPTION: create_react_context
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: Process: com.nbcuni.nbcsports.onthelot, PID: 7234
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/onetrust/otpublishers/headless/Public/OTPublishersHeadlessSDK;
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.onetrust.OneTrust.<init>(OneTrust.java:41)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.onetrust.OTPublishersNativeSDKPackage.createNativeModules(OTPublishersNativeSDKPackage.java:21)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.ReactPackageHelper.getNativeModuleIterator(ReactPackageHelper.java:42)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.NativeModuleRegistryBuilder.processPackage(NativeModuleRegistryBuilder.java:42)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackage(ReactInstanceManager.java:1467)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.processPackages(ReactInstanceManager.java:1438)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.createReactContext(ReactInstanceManager.java:1340)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager.-$$Nest$mcreateReactContext(Unknown Source:0)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at com.facebook.react.ReactInstanceManager$5.run(ReactInstanceManager.java:1111)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: Caused by: java.lang.ClassNotFoundException: com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK
+10-20 14:09:27.971  7234  7288 E AndroidRuntime: 	... 10 more
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: Process: com.nbcuni.nbcsports.onthelot, PID: 9459
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String java.lang.String.trim()' on a null object reference
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK.a(SourceFile:45)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK.startSDK(Unknown Source:7)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.onetrust.OneTrust.startSDK(OneTrust.java:97)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:188)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:938)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:223)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+10-20 14:34:36.869  9459  9549 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: FATAL EXCEPTION: expo-updates-error-recovery
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: Process: com.nbcuni.nbcsports.onthelot, PID: 10410
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String java.lang.String.trim()' on a null object reference
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK.a(SourceFile:45)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.onetrust.otpublishers.headless.Public.OTPublishersHeadlessSDK.startSDK(Unknown Source:7)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.onetrust.OneTrust.startSDK(OneTrust.java:97)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:188)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:938)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:223)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:228)
+10-20 14:58:03.472 10410 10434 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:923)
+10-20 15:22:59.603   186   186 F libc    : crash_dump helper failed to exec
+10-20 18:55:10.815   186   186 F libc    : crash_dump helper failed to exec
+10-20 18:56:12.945   186   186 F libc    : crash_dump helper failed to exec
+10-20 18:56:27.318   902   902 E AndroidRuntime: FATAL EXCEPTION: main
+10-20 18:56:27.318   902   902 E AndroidRuntime: Process: com.android.phone, PID: 902
+10-20 18:56:27.318   902   902 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-20 18:56:38.765  2610  2764 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-20 18:56:38.765  2610  2764 E AndroidRuntime: Process: com.google.android.ims, PID: 2610
+10-20 18:56:38.765  2610  2764 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-20 18:56:38.948  2610  2610 E AndroidRuntime: FATAL EXCEPTION: main
+10-20 18:56:38.948  2610  2610 E AndroidRuntime: Process: com.google.android.ims, PID: 2610
+10-20 18:56:38.948  2610  2610 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-20 18:57:13.546  1395  1395 E AndroidRuntime: FATAL EXCEPTION: main
+10-20 18:57:13.546  1395  1395 E AndroidRuntime: Process: com.google.android.googlequicksearchbox:interactor, PID: 1395
+10-20 18:57:13.546  1395  1395 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-20 19:01:30.128   186   186 F libc    : crash_dump helper failed to exec
+10-21 01:40:28.648   186   186 F libc    : crash_dump helper failed to exec
+10-21 01:41:12.645   186   186 F libc    : crash_dump helper failed to exec
+10-21 01:42:28.481 22786 22877 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-21 01:42:28.481 22786 22877 E AndroidRuntime: Process: com.google.android.ims, PID: 22786
+10-21 01:42:28.481 22786 22877 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:42:28.665 22786 22786 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:42:28.665 22786 22786 E AndroidRuntime: Process: com.google.android.ims, PID: 22786
+10-21 01:42:28.665 22786 22786 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:34.087 26690 27505 E AndroidRuntime: FATAL EXCEPTION: highpool[11]
+10-21 01:43:34.087 26690 27505 E AndroidRuntime: Process: com.google.android.gms.persistent, PID: 26690
+10-21 01:43:34.087 26690 27505 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:42.351 20872 20872 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:43:42.351 20872 20872 E AndroidRuntime: Process: com.google.android.googlequicksearchbox:search, PID: 20872
+10-21 01:43:42.351 20872 20872 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:42.515 19909 19909 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:43:42.515 19909 19909 E AndroidRuntime: Process: com.google.android.gms, PID: 19909
+10-21 01:43:42.515 19909 19909 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:42.812 31623 31673 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-21 01:43:42.812 31623 31673 E AndroidRuntime: Process: com.google.android.gms.feedback, PID: 31623
+10-21 01:43:42.812 31623 31673 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:42.914 28356 28397 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-21 01:43:42.914 28356 28397 E AndroidRuntime: Process: com.google.android.gms.unstable, PID: 28356
+10-21 01:43:42.914 28356 28397 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:42.923 31607 31675 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-21 01:43:42.923 31607 31675 E AndroidRuntime: Process: com.google.android.gms.ui, PID: 31607
+10-21 01:43:42.923 31607 31675 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:43.003 20872 20932 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-21 01:43:43.003 20872 20932 E AndroidRuntime: Process: com.google.android.googlequicksearchbox:search, PID: 20872
+10-21 01:43:43.003 20872 20932 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:43:43.014 19909 20253 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-21 01:43:43.014 19909 20253 E AndroidRuntime: Process: com.google.android.gms, PID: 19909
+10-21 01:43:43.014 19909 20253 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:48:14.540   625   625 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:48:14.540   625   625 E AndroidRuntime: Process: com.android.systemui, PID: 625
+10-21 01:48:14.540   625   625 E AndroidRuntime: java.lang.RuntimeException: Unable to get provider com.google.android.systemui.keyguard.KeyguardSliceProviderGoogle: java.lang.RuntimeException: android.os.DeadObjectException
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.app.ActivityThread.installProvider(ActivityThread.java:7244)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.app.ActivityThread.installContentProviders(ActivityThread.java:6780)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6697)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.app.ActivityThread.access$1300(ActivityThread.java:237)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1913)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:223)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7656)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+10-21 01:48:14.540   625   625 E AndroidRuntime: Caused by: java.lang.RuntimeException: android.os.DeadObjectException
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.keyguard.KeyguardUpdateMonitor.<init>(KeyguardUpdateMonitor.java:1743)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.keyguard.KeyguardUpdateMonitor_Factory.provideInstance(KeyguardUpdateMonitor_Factory.java:84)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.keyguard.KeyguardUpdateMonitor_Factory.get(KeyguardUpdateMonitor_Factory.java:56)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.keyguard.KeyguardUpdateMonitor_Factory.get(KeyguardUpdateMonitor_Factory.java:15)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.policy.KeyguardStateControllerImpl_Factory.provideInstance(KeyguardStateControllerImpl_Factory.java:41)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.policy.KeyguardStateControllerImpl_Factory.get(KeyguardStateControllerImpl_Factory.java:32)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.policy.KeyguardStateControllerImpl_Factory.get(KeyguardStateControllerImpl_Factory.java:10)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.google.android.systemui.NotificationLockscreenUserManagerGoogle_Factory.provideInstance(NotificationLockscreenUserManagerGoogle_Factory.java:117)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.google.android.systemui.NotificationLockscreenUserManagerGoogle_Factory.get(NotificationLockscreenUserManagerGoogle_Factory.java:79)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.google.android.systemui.NotificationLockscreenUserManagerGoogle_Factory.get(NotificationLockscreenUserManagerGoogle_Factory.java:21)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.phone.KeyguardBypassController_Factory.provideInstance(KeyguardBypassController_Factory.java:66)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.phone.KeyguardBypassController_Factory.get(KeyguardBypassController_Factory.java:46)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.phone.KeyguardBypassController_Factory.get(KeyguardBypassController_Factory.java:13)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.google.android.systemui.dagger.SystemUIGoogleModule_ProvideHeadsUpManagerPhoneFactory.provideInstance(SystemUIGoogleModule_ProvideHeadsUpManagerPhoneFactory.java:61)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.google.android.systemui.dagger.SystemUIGoogleModule_ProvideHeadsUpManagerPhoneFactory.get(SystemUIGoogleModule_ProvideHeadsUpManagerPhoneFactory.java:44)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.google.android.systemui.dagger.SystemUIGoogleModule_ProvideHeadsUpManagerPhoneFactory.get(SystemUIGoogleModule_ProvideHeadsUpManagerPhoneFactory.java:14)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.notification.collection.NotificationRankingManager_Factory.provideInstance(NotificationRankingManager_Factory.java:82)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.notification.collection.NotificationRankingManager_Factory.get(NotificationRankingManager_Factory.java:59)
+10-21 01:48:14.540   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.notification.collection.NotificationRankingManager_Factory.get(NotificationRankingManager_Factory.java:17)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.notification.dagger.NotificationsModule_ProvideNotificationEntryManagerFactory.provideInstance(NotificationsModule_ProvideNotificationEntryManagerFactory.java:90)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.notification.dagger.NotificationsModule_ProvideNotificationEntryManagerFactory.get(NotificationsModule_ProvideNotificationEntryManagerFactory.java:65)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.notification.dagger.NotificationsModule_ProvideNotificationEntryManagerFactory.get(NotificationsModule_ProvideNotificationEntryManagerFactory.java:19)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at dagger.internal.DelegateFactory.get(DelegateFactory.java:34)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.dagger.StatusBarDependenciesModule_ProvideNotificationMediaManagerFactory.provideInstance(StatusBarDependenciesModule_ProvideNotificationMediaManagerFactory.java:93)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.dagger.StatusBarDependenciesModule_ProvideNotificationMediaManagerFactory.get(StatusBarDependenciesModule_ProvideNotificationMediaManagerFactory.java:67)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.statusbar.dagger.StatusBarDependenciesModule_ProvideNotificationMediaManagerFactory.get(StatusBarDependenciesModule_ProvideNotificationMediaManagerFactory.java:20)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at dagger.internal.DoubleCheck.get(DoubleCheck.java:47)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.google.android.systemui.dagger.DaggerSystemUIGoogleRootComponent.injectKeyguardSliceProvider(DaggerSystemUIGoogleRootComponent.java:4775)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.google.android.systemui.dagger.DaggerSystemUIGoogleRootComponent.inject(DaggerSystemUIGoogleRootComponent.java:4733)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.keyguard.KeyguardSliceProvider.inject(KeyguardSliceProvider.java:323)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.systemui.keyguard.KeyguardSliceProvider.onCreateSliceProvider(KeyguardSliceProvider.java:301)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.google.android.systemui.keyguard.KeyguardSliceProviderGoogle.onCreateSliceProvider(KeyguardSliceProviderGoogle.java:82)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at androidx.slice.SliceProvider.onCreate(SliceProvider.java:211)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at android.content.ContentProvider.attachInfo(ContentProvider.java:2388)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at android.content.ContentProvider.attachInfo(ContentProvider.java:2358)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at androidx.slice.SliceProvider.attachInfo(SliceProvider.java:250)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at androidx.slice.compat.SliceProviderWrapperContainer$SliceProviderWrapper.attachInfo(SliceProviderWrapperContainer.java:74)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at android.app.ActivityThread.installProvider(ActivityThread.java:7239)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	... 10 more
+10-21 01:48:14.543   625   625 E AndroidRuntime: Caused by: android.os.DeadObjectException
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at android.os.BinderProxy.transactNative(Native Method)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at android.os.BinderProxy.transact(BinderProxy.java:540)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at android.app.IActivityManager$Stub$Proxy.registerUserSwitchObserver(IActivityManager.java:8325)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	at com.android.keyguard.KeyguardUpdateMonitor.<init>(KeyguardUpdateMonitor.java:1741)
+10-21 01:48:14.543   625   625 E AndroidRuntime: 	... 53 more
+10-21 01:48:14.583   862   862 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:48:14.583   862   862 E AndroidRuntime: Process: com.android.bluetooth, PID: 862
+10-21 01:48:14.583   862   862 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:48:14.627   839   839 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:48:14.627   839   839 E AndroidRuntime: Process: com.android.networkstack.process, PID: 839
+10-21 01:48:14.627   839   839 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:52:28.694   186   186 F libc    : crash_dump helper failed to exec
+10-21 01:52:59.440  1245  1532 E AndroidRuntime: FATAL EXCEPTION: pool-3-thread-1
+10-21 01:52:59.440  1245  1532 E AndroidRuntime: Process: com.android.systemui, PID: 1245
+10-21 01:52:59.440  1245  1532 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:52:59.880  1518  1518 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 01:52:59.880  1518  1518 E AndroidRuntime: Process: com.android.phone, PID: 1518
+10-21 01:52:59.880  1518  1518 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 01:55:04.676   186   186 F libc    : crash_dump helper failed to exec
+10-21 10:11:39.867   186   186 F libc    : crash_dump helper failed to exec
+10-21 10:12:23.827   186   186 F libc    : crash_dump helper failed to exec
+10-21 10:12:54.057  2115  2115 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 10:12:54.057  2115  2115 E AndroidRuntime: Process: com.android.phone, PID: 2115
+10-21 10:12:54.057  2115  2115 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 10:13:11.776  3921  3921 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 10:13:11.776  3921  3921 E AndroidRuntime: Process: com.google.android.ims, PID: 3921
+10-21 10:13:11.776  3921  3921 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 10:13:11.789  3340  3340 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 10:13:11.789  3340  3340 E AndroidRuntime: Process: com.google.android.googlequicksearchbox:interactor, PID: 3340
+10-21 10:13:11.789  3340  3340 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 10:15:11.921 11560 11560 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 10:15:11.921 11560 11560 E AndroidRuntime: Process: com.google.android.gms.persistent, PID: 11560
+10-21 10:15:11.921 11560 11560 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 10:15:12.557  1870  1870 E AndroidRuntime: FATAL EXCEPTION: main
+10-21 10:15:12.557  1870  1870 E AndroidRuntime: Process: com.android.systemui, PID: 1870
+10-21 10:15:12.557  1870  1870 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-21 10:17:35.898   186   186 F libc    : crash_dump helper failed to exec
+10-21 10:18:34.396   186   186 I chatty  : uid=0(root) Binder:186_2 identical 1 line
+10-21 10:19:28.089   186   186 F libc    : crash_dump helper failed to exec
+10-21 15:55:28.153   186   186 F libc    : crash_dump helper failed to exec
+10-22 00:24:26.034 15238 15302 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 15302 (bt_hci_thread), pid 15238 (droid.bluetooth)
+10-22 00:26:20.322 15238 15302 F libc    : crash_dump helper failed to exec
+10-22 00:32:29.739 14829 14973 E AndroidRuntime: FATAL EXCEPTION: SysUiBg
+10-22 00:32:29.739 14829 14973 E AndroidRuntime: Process: com.android.systemui, PID: 14829
+10-22 00:32:29.739 14829 14973 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-22 00:32:29.872 15515 15825 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-22 00:32:29.872 15515 15825 E AndroidRuntime: Process: com.google.android.googlequicksearchbox:interactor, PID: 15515
+10-22 00:32:29.872 15515 15825 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-22 00:32:30.207 17758 17875 E AndroidRuntime: FATAL EXCEPTION: GoogleApiHandler
+10-22 00:32:30.207 17758 17875 E AndroidRuntime: Process: com.google.android.ims, PID: 17758
+10-22 00:32:30.207 17758 17875 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: FATAL EXCEPTION: nmh
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: Process: com.google.android.videos, PID: 25709
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: java.lang.IllegalStateException: android.os.DeadObjectException
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager$AmsTask.internalGetResult(AccountManager.java:2291)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager$AmsTask.getResult(AccountManager.java:2302)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager$AmsTask.getResult(AccountManager.java:2217)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager.blockingGetAuthToken(AccountManager.java:1515)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at nmh.a(PG:149)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at nmh.b(PG:348)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at nmc.dispatchMessage(PG:17)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:223)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: Caused by: android.os.DeadObjectException
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.os.BinderProxy.transactNative(Native Method)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.os.BinderProxy.transact(BinderProxy.java:540)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.IAccountManager$Stub$Proxy.getAuthToken(IAccountManager.java:1820)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager$8.doWork(AccountManager.java:1768)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager$AmsTask.start(AccountManager.java:2241)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager.getAuthToken(AccountManager.java:1771)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager.getAuthToken(AccountManager.java:1677)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	at android.accounts.AccountManager.blockingGetAuthToken(AccountManager.java:1514)
+10-22 00:32:30.312 25709 25758 E AndroidRuntime: 	... 5 more
+10-22 00:32:30.385 24468 24468 E AndroidRuntime: FATAL EXCEPTION: main
+10-22 00:32:30.385 24468 24468 E AndroidRuntime: Process: com.google.android.apps.wellbeing, PID: 24468
+10-22 00:32:30.385 24468 24468 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause
+10-22 00:32:32.109 15041 15041 E AndroidRuntime: FATAL EXCEPTION: main
+10-22 00:32:32.109 15041 15041 E AndroidRuntime: Process: com.android.phone, PID: 15041
+10-22 00:32:32.109 15041 15041 E AndroidRuntime: DeadSystemException: The system died; earlier logs will point to the root cause

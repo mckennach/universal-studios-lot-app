@@ -1,9 +1,9 @@
 import { TouchableOpacity, StyleSheet } from "react-native"
 import * as Location from "expo-location"
 import { Text, View } from "../Themed";
-import Colors from "@/constants/Colors";
+import Colors from "../../constants/Colors";
 import { HeadingBoldText, HeadingMediumText } from "../StyledText"
-import { AppContextProps } from "@/app/_layout";
+import { AppContextProps } from "../../app/_layout";
 import { router } from "expo-router";
 
 const MapDisabled = ({
@@ -16,7 +16,7 @@ const MapDisabled = ({
   const handleButtonPress = async (requestAccess = true) => {
       if (requestAccess) {
         const { status, canAskAgain } = await Location.requestForegroundPermissionsAsync();
-        console.log(canAskAgain);
+        
         if (status === "granted") {
           setLocationEnabled(true);
           setIsModalOpen(false);

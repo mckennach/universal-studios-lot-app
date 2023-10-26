@@ -1,6 +1,6 @@
 import { Text, TextProps } from './Themed';
-import Colors from '@/constants/Colors';
-import Layout from '@/constants/Layout';
+import Colors from '../constants/Colors';
+import Layout from '../constants/Layout';
 import RenderHtml, { defaultSystemFonts, HTMLSource} from "react-native-render-html";
 
 export function MonoText(props: TextProps) {

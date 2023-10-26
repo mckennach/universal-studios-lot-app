@@ -1,9 +1,9 @@
 import { View } from "../Themed";
 import { ScrollView, StyleSheet, TouchableOpacity, Linking, Dimensions } from "react-native";
-import Colors from "@/constants/Colors";
+import Colors from "../../constants/Colors";
 import { HeadingBoldText, LightText } from "../StyledText";
-import Layout from "@/constants/Layout";
-import { logObject, formatParagraph, contactUrl } from "@/utils/helpers";
+import Layout from "../../constants/Layout";
+import { logObject, formatParagraph, contactUrl } from "../../utils/helpers";
 import ImageGallery from "../Images/ImageGallery";
 
 const DefaultDetail = ({ data }: any) => {

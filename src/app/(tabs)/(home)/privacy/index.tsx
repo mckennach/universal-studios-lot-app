@@ -1,17 +1,20 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import {
   StyleSheet,
   FlatList,
   TouchableHighlight,
   Linking,
   View,
+  Platform,
   Text
 } from "react-native";
 import { Route, router, Href, Link, Redirect, usePathname } from "expo-router";
-import Layout from "@/constants/Layout";
-import OneTrustModal from "@/components/Modals/OneTrustModal";
-import Colors from "@/constants/Colors";
-import { HeadingMediumText } from "@/components/StyledText";
+import Layout from "../../../../constants/Layout";
+// import OneTrustModal from "../../../../components/Modals/OneTrustModal";
+import Colors from "../../../../constants/Colors";
+import { HeadingMediumText } from "../../../../components/StyledText";
+import OTPublishersNativeSDK from "react-native-onetrust-cmp";
+const { EXPO_PUBLIC_ONETRUST_DOMAIN, EXPO_PUBLIC_ONETRUST_IOS, EXPO_PUBLIC_ONETRUST_ANDROID } = process.env;
 
 
 interface ItemData {
@@ -41,7 +44,7 @@ const DATA: ItemData[] = [
     key: "3",
     title: "YOUR PRIVACY CHOICES",
     navigation: "Driving",
-    url: "/driving",
+    url: "onetrust",
     linkItem: false,
   },
   {
@@ -63,13 +66,18 @@ const DATA: ItemData[] = [
 type ItemProps = { title: string; linkItem?: boolean; url: any };
 
 const handlePress = async (url: any) => {
-  const supported = await Linking.canOpenURL(url);
-  console.log(supported);
-  if (supported) {
-    await Linking.openURL(url);
+  if(url === "onetrust") {
+
+    OTPublishersNativeSDK.showPreferenceCenterUI();
   } else {
-    router.push(url);
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      router.push(url);
+    }
   }
+ 
 };
 
 const Item = ({ title, linkItem, url }: ItemProps) => (
@@ -85,6 +93,32 @@ const Item = ({ title, linkItem, url }: ItemProps) => (
 
 export default function PrivacyScreen() {
   const pathname = usePathname();
+  const [oneTrustId, setOneTrustId] = useState<string>("");
+  useEffect(() => {
+    
+    const id = Platform.OS === "ios" ? EXPO_PUBLIC_ONETRUST_IOS : EXPO_PUBLIC_ONETRUST_ANDROID;
+    setOneTrustId(id as string);
+    OTPublishersNativeSDK.startSDK(
+      EXPO_PUBLIC_ONETRUST_DOMAIN as string,
+      id as string,
+      "en",
+      {
+        countryCode: "US",
+      },
+      true
+    )
+      .then((responseObject: any) => {
+        if(responseObject) {
+          console.info("Download status is " + responseObject?.status);
+        }
+        // get full JSON object from responseObject.responseString
+      })
+      .catch((error) => {
+        console.error(`OneTrust download failed with error ${error}`);
+      });
+   
+  }, [])
+  
 
   return (
     <View style={styles.container}>
@@ -96,7 +130,7 @@ export default function PrivacyScreen() {
         )}
         keyExtractor={(item) => item.key}
       />
-      <OneTrustModal />
+      {/* <OneTrustModal /> */}
     </View>
   );
 }

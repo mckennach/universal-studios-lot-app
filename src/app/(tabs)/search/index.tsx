@@ -10,11 +10,11 @@ import {
 import { debounce } from "lodash";
 // import { Text, View } from "../../components/Themed";
 import { router } from 'expo-router';
-import Colors from "@/constants/Colors";
-import Icons from "@/constants/Icons/Icons";
+import Colors from "../../../constants/Colors";
+import Icons from "../../../constants/Icons/Icons";
 import { SearchBar } from "@rneui/themed";
 import { logObject } from "@/utils/helpers";
-import { ParagraphMediumText } from "@/components/StyledText";
+import { ParagraphMediumText } from "../../../components/StyledText";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 interface SearchResultProps {
@@ -39,7 +39,7 @@ export default function SearchScreen() {
     if(searchTerm.length > 0) {
       handleSearch();
     } else {
-      console.log('here');
+    
       setSearchData(null);
     }
   }, [searchTerm]);

@@ -2,9 +2,9 @@ import Swiper from "react-native-swiper";
 import ProgressiveImage from "./ProgressiveImage";
 import { View, Text } from "../Themed";
 import { StyleSheet } from "react-native";
-import Icons from "@/constants/Icons/Icons";
-import Colors from "@/constants/Colors";
-import { chunkMaxLength, logObject } from "@/utils/helpers";
+import Icons from "../../constants/Icons/Icons";
+import Colors from "../../constants/Colors";
+import { chunkMaxLength, logObject } from "../../utils/helpers";
 const { EXPO_PUBLIC_API_URL } = process.env;
 
 const ImageGallery = ({ data }: any) => {
@@ -13,7 +13,7 @@ const ImageGallery = ({ data }: any) => {
     const gallerySplit = data.constructor.name === 'Array' ? [] : data.split(",");
     const gallery = data.constructor.name === 'Array' ? data : chunkMaxLength(gallerySplit, 9, gallerySplit.length / 9);
  
-    console.log(gallery.length)
+    
     return (
       <Swiper
         style={styles.container}

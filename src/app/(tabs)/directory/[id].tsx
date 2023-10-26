@@ -7,19 +7,19 @@ import {
   Linking, 
   Share } from "react-native";
 import { useLocalSearchParams, router } from "expo-router";
-import { View } from "@/components/Themed";
+import { View } from "../../../components/Themed";
 import { ListItem } from "@rneui/themed";
 import {
   HTML,
   HeadingMediumText,
   HeadingBoldText,
-} from "@/components/StyledText";
+} from "../../../components/StyledText";
 
-import Colors from "@/constants/Colors";
-import Layout from "@/constants/Layout";
-import Icons from "@/constants/Icons/Icons";
+import Colors from "../../../constants/Colors";
+import Layout from "../../../constants/Layout";
+import Icons from "../../../constants/Icons/Icons";
 import { WebView } from "react-native-webview"; //Add this to your imports
-import { logObject } from "@/utils/helpers";
+import { logObject } from "../../../utils/helpers";
 
 
 export default function DirectoryDetailScreen() {

@@ -1,18 +1,56 @@
 {
-  "cli": {
-    "version": ">= 5.2.0"
-  },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
+    "release": {
+      "ios": {
+        "cache": {
+          "disabled": true
+        }
+      }
     },
     "preview": {
+      "android": {
+        "distribution": "internal",
+        "withoutCredentials": true,
+        "gradleCommand": ":app:assembleDebug",
+        "buildType": "apk"
+      },
+      "ios": {
+        "credentialsSource": "remote"
+      },
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://www.universalstudioslot.com",
+        "EXPO_PUBLIC_IOS_MAP_KEY": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k",
+        "EXPO_PUBLIC_ANDROID_MAP_KEY": "AIzaSyCvgzlIVC_hu6XD0SOu0NUM4jvEOneo4s0",
+        "EXPO_PUBLIC_DIRECTIONS_KEY": "AIzaSyAatF6UjKOqASa3H_W5c1UpFPtiq6f1LZI",
+        "EXPO_PUBLIC_ONETRUST_IOS": "40898be3-024d-4820-a4c5-a5ab03228db3-test",
+        "EXPO_PUBLIC_ONETRUST_ANDROID": "8b57ff1f-5695-4471-8d2e-cc39b13191af-test",
+        "EXPO_PUBLIC_ONETRUST_DOMAIN": "cdn.cookielaw.org",
+        "EXPO_APPLE_TEAM_ID": "VFBSD3EVJ3"
+      }
+    }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "../path/to/api-xxx-yyy-zzz.json",
+        "track": "internal"
+      },
+      "ios": {
+        "appleId": "Christina.Sepulveda@nbcuni.com",
+        "ascAppId": "1562372055",
+        "appleTeamId": "VFBSD3EVJ3"
+      }
+    }
+  },
+  "cli": {
+    "version": ">= 5.2.0",
+    "promptToConfigurePushNotifications": false
   }
 }
