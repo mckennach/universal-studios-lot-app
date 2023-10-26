@@ -1,28 +1,34 @@
 {
   "expo": {
     "owner": "lkexpo",
-    "name": "Universal on the Lot",
-    "slug": "universal-studios-lot",
-    "scheme": "universal-studios-lot",
+    "name": "Universal On The Lot",
+    "slug": "universal",
+    "scheme": "universal",
     "privacy": "public",
-    "version": "1.4.0",
-    "orientation": "portrait",
-    "sdkVersion": "49.0.0",
-    "icon": "./src/assets/images/LK-UniversalLot-OnTheLot-icon.png",
-    "userInterfaceStyle": "dark",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
+    "sdkVersion": "49.0.0",
+    "version": "1.4.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./src/assets/images/LK-UniversalLot-OnTheLot-icon.png",
     "splash": {
-      "image": "./src/assets/images/splash.png",
+      "image": "./src/assets/images/loading-screen-3.png",
       "resizeMode": "contain",
       "backgroundColor": "#343434"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
+    "androidStatusBar": {
+      "translucent": true,
+      "backgroundColor": "#343434"
+    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.nbcuni.nbcsports.onthelot",
@@ -43,9 +49,10 @@
         "googleMapsApiKey": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k"
       }
     },
+    "description": "V15\n",
     "android": {
       "package": "com.nbcuni.nbcsports.onthelot",
-      "versionCode": 32,
+      "versionCode": 34,
       "permissions": [
         "ACCESS_COARSE_LOCATION",
         "ACCESS_BACKGROUND_LOCATION",
@@ -79,21 +86,21 @@
         }
       }
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./src/assets/images/favicon.png"
-    },
     "extra": {
       "API_URL": "https://www.universalstudioslot.com",
       "eas": {
-        "projectId": "e340f2b3-51eb-4200-a8a0-9a70f0683256"
+        "projectId": "90ef57e0-3937-11e9-aabf-b34201154ba8"
       },
       "IOS_MAP_KEY": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k",
       "ANDROID_MAP_KEY": "AIzaSyCvgzlIVC_hu6XD0SOu0NUM4jvEOneo4s0",
       "GOOGLE_MAPS_APIKEY_DIRECTIONS": "AIzaSyAatF6UjKOqASa3H_W5c1UpFPtiq6f1LZI"
     },
     "plugins": [
+      "@config-plugins/react-native-webrtc",
+      [
+        "expo-onetrust/index",
+        "custom"
+      ],
       [
         "expo-updates",
         {
@@ -120,20 +127,11 @@
           "android": {
             "compileSdkVersion": 33,
             "targetSdkVersion": 33,
-            "buildToolsVersion": "33.0.0"
+            "buildToolsVersion": "34.0.0"
           }
         }
       ]
-    ],
-    "experiments": {
-      "tsconfigPaths": true,
-      "typedRoutes": true
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/e340f2b3-51eb-4200-a8a0-9a70f0683256"
-    }
+    ]
   }
 }
+

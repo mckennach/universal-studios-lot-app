@@ -39,7 +39,7 @@ export default function SearchScreen() {
     if(searchTerm.length > 0) {
       handleSearch();
     } else {
-      console.log('here');
+    
       setSearchData(null);
     }
   }, [searchTerm]);

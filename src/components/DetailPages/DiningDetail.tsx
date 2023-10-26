@@ -20,7 +20,7 @@ const DiningDetail = ({ data }: any) => {
   const description = formatParagraph(data.description);
   const pdfButton = data.pdf ? data.pdf.split(',') : null;
   const orderButton = data.order_link ? data.order_link.split(',') : null;
-  console.log(pdfButton)
+
   
   
   return (

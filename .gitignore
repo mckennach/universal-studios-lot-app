@@ -32,7 +32,6 @@ yarn-error.*
 .env
 .env.development
 .env*.local
-expo-env.d.ts
 
 # typescript
 *.tsbuildinfo

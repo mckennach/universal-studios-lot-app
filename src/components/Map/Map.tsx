@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { KeyboardAvoidingView, Platform, StyleSheet, TouchableOpacity } from "react-native";
+import { Alert, KeyboardAvoidingView, Platform, StyleSheet, TouchableOpacity } from "react-native";
 import MapView, {
   PROVIDER_GOOGLE,
   Marker,
@@ -92,7 +92,7 @@ const Map = ({ data, activeData }: { data: LocationProps[] | null, activeData?: 
             ? process.env.EXPO_PUBLIC_ANDROID_MAP_KEY as string
             : process.env.EXPO_PUBLIC_IOS_MAP_KEY as string
         );
-
+       
         setDirectionsApiKey(
           process.env.EXPO_PUBLIC_DIRECTIONS_KEY as string
         )
@@ -132,7 +132,7 @@ const Map = ({ data, activeData }: { data: LocationProps[] | null, activeData?: 
             },
             (location) => {
               if(location !== userLocation) {
-                console.log('UPDATE LOCATION');
+                
                 setUserLocation(location);
               }
             }
@@ -243,7 +243,7 @@ const Map = ({ data, activeData }: { data: LocationProps[] | null, activeData?: 
         >
           <SearchBar
             containerStyle={SearchStyles.searchContainer}
-            
+          
             rightIconContainerStyle={SearchStyles.clearIcon}
             inputStyle={SearchStyles.searchStyles}
             searchIcon={<Icons name="search" size={16} color="#F9F1E1" />}

@@ -5,16 +5,15 @@
     "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
     "noEmit": true,
     "paths": {
       "@/*": [
         "./src/*",
-        "./src/components/*", 
-        "./src/constants/*", 
-        "./src/assets/*", 
+        "./src/components/*",
+        "./src/constants/*",
+        "./src/assets/*",
         "./src/app/*",
-        "./src/constants/Icons/*",
+        "./src/constants/Icons/*"
       ],
       "@components/*": [
         "./src/components/*"
@@ -31,12 +30,10 @@
       "@icons/*": [
         "./src/constants/Icons/*"
       ]
-    },
+    }
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "**/*.tsx"
   ]
 }

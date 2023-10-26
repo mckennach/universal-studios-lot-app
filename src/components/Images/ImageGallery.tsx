@@ -13,7 +13,7 @@ const ImageGallery = ({ data }: any) => {
     const gallerySplit = data.constructor.name === 'Array' ? [] : data.split(",");
     const gallery = data.constructor.name === 'Array' ? data : chunkMaxLength(gallerySplit, 9, gallerySplit.length / 9);
  
-    console.log(gallery.length)
+    
     return (
       <Swiper
         style={styles.container}

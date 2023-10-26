@@ -1,15 +1,16 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import {
   StyleSheet,
   FlatList,
   TouchableHighlight,
   Linking,
   View,
-  Platform
+  Platform,
+  Text
 } from "react-native";
 import { Route, router, Href, Link, Redirect, usePathname } from "expo-router";
 import Layout from "../../../../constants/Layout";
-import OneTrustModal from "../../../../components/Modals/OneTrustModal";
+// import OneTrustModal from "../../../../components/Modals/OneTrustModal";
 import Colors from "../../../../constants/Colors";
 import { HeadingMediumText } from "../../../../components/StyledText";
 import OTPublishersNativeSDK from "react-native-onetrust-cmp";
@@ -66,6 +67,7 @@ type ItemProps = { title: string; linkItem?: boolean; url: any };
 
 const handlePress = async (url: any) => {
   if(url === "onetrust") {
+
     OTPublishersNativeSDK.showPreferenceCenterUI();
   } else {
     const supported = await Linking.canOpenURL(url);
@@ -91,11 +93,11 @@ const Item = ({ title, linkItem, url }: ItemProps) => (
 
 export default function PrivacyScreen() {
   const pathname = usePathname();
-
+  const [oneTrustId, setOneTrustId] = useState<string>("");
   useEffect(() => {
     
     const id = Platform.OS === "ios" ? EXPO_PUBLIC_ONETRUST_IOS : EXPO_PUBLIC_ONETRUST_ANDROID;
-
+    setOneTrustId(id as string);
     OTPublishersNativeSDK.startSDK(
       EXPO_PUBLIC_ONETRUST_DOMAIN as string,
       id as string,
