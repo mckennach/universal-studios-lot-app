@@ -94,6 +94,7 @@ export default function SearchScreen() {
         params.description = "Backlots";
         break;
       case "map-for-app":
+        // params.url = `/search`;
         params.url = `/map/${item.page_id}`;
         params.description = "Map";
         break;

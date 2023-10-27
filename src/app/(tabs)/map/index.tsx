@@ -3,6 +3,8 @@ import { StyleSheet } from "react-native";
 // import { View, Text } from "@/components/Themed";
 import Map from "../../../components/Map/Map";
 import { logObject } from "@/utils/helpers";
+import * as Location from "expo-location";
+
 import type { LocationProps } from "../../../utils/types/map";
 import MapDisabled from "../../../components/Map/MapDisabled";
 import PermissionsModal from "../../../components/Modals/PermissionsModal";
@@ -29,17 +31,23 @@ export default function MapScreen() {
   
 
   useEffect(() => {
-    if(locationEnabled) {
-      fetchData().then((data) => {
-        setData(data?.data);
-      });
-    } else {
-      setIsModalOpen(true);
-    }
-    
+
+    (async () => {
+      const { granted } = await Location.getForegroundPermissionsAsync();
+      const { granted: bgGranted } = await Location.getBackgroundPermissionsAsync();
+      const test = await Location.isBackgroundLocationAvailableAsync();
+      if(granted && bgGranted && locationEnabled) {
+        fetchData().then((data) => {
+          setData(data?.data);
+        });
+      } else {
+        setIsModalOpen(true);
+      }
+    })();
+
   }, [locationEnabled]);
 
-  
+  console.log(locationEnabled);
 
   if(!locationEnabled) return (
     <>

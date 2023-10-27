@@ -6,9 +6,8 @@ import {
   FlatList,
   TouchableHighlight,
   Linking,
-  Alert
 } from "react-native";
-import { Route, router, Href, Link, Redirect, usePathname } from "expo-router";
+import { router, usePathname } from "expo-router";
 import Layout from "../../../constants/Layout";
 import { Text, View } from "../../../components/Themed";
 import Colors from "../../../constants/Colors";
@@ -118,10 +117,12 @@ export default function HomeScreen() {
   const pathname = usePathname();
     const app = useContext<AppContextProps>(AppContext);
     const {locationEnabled, setLocationEnabled, isModalOpen, setIsModalOpen } = app;
+    // console.log(locationEnabled);
     useEffect(() => {
       (async () => {
         const { granted } = await Location.getForegroundPermissionsAsync();
-       
+        // const { granted: bgGranted } = await Location.getBackgroundPermissionsAsync();
+      
         if (!granted && setLocationEnabled && setIsModalOpen) {
           setLocationEnabled(false);
           setIsModalOpen(true);

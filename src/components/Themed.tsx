@@ -7,6 +7,7 @@ import { Text as DefaultText, useColorScheme, View as DefaultView } from 'react-
 import RNModal from "react-native-modal";
 import { HeadingBoldText } from './StyledText';
 import Colors from '../constants/Colors';
+import Layout from '../constants/Layout';
 
 type ThemeProps = {
   lightColor?: string;
@@ -59,6 +60,9 @@ export function Modal(props: ModalProps) {
       onBackdropPress={() => setIsModalOpen(false)}
       onSwipeComplete={onSwipeComplete}
       swipeDirection="up"
+      coverScreen={true}
+      deviceWidth={Layout.window.width}
+      deviceHeight={Layout.window.height}
       animationInTiming={1000}
       animationOutTiming={1000}
       backdropTransitionInTiming={800}
@@ -96,11 +100,14 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     paddingVertical: 50,
     paddingHorizontal: 5,
+    // height: Layout.window.height / 1.5,
+    justifyContent: "space-between",
   },
   header: {
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: Colors.dark.creamBg,
+    marginBottom: 10
   },
   text: {
     marginBottom: 10,
@@ -111,7 +118,7 @@ const styles = StyleSheet.create({
   body: {
     justifyContent: "center",
     paddingHorizontal: 15,
-    minHeight: 100,
+    // minHeight: 100,
     marginBottom: 15,
     backgroundColor: Colors.dark.creamBg,
   },
@@ -120,7 +127,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     flexDirection: "row",
+    marginTop: 50,
     backgroundColor: Colors.dark.creamBg,
+    // justifySelf: "flex-end",
+    // alignSelf: "flex-end",
   },
 });
 

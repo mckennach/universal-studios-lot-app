@@ -82,6 +82,8 @@ export default function TabLayout() {
         name="map"
         options={{
           title: "Map",
+          // tabBarStyle: { display: "none"  },
+          // tabBarItemStyle: { display: "none" },
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="pin" color={color} size={25} />
           ),

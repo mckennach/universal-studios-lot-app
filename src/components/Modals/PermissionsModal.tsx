@@ -1,9 +1,12 @@
 import { TouchableOpacity, StyleSheet } from "react-native";
 import * as Location from "expo-location";
 import Colors from "../../constants/Colors";
+import * as TaskManager from 'expo-task-manager';
 import { AppContextProps } from "../../app/_layout";
 import { View, Text, Modal } from "../Themed";
 import { HeadingBoldText, ParagraphText } from "../StyledText";
+
+const LOCATION_TASK_NAME = 'background-location-task';
 
 const PermissionsModal = ({
   locationEnabled,
@@ -14,11 +17,25 @@ const PermissionsModal = ({
 
     const handleButtonPress = async (requestAccess = true) => {
         if(requestAccess) {
-            const { status } = await Location.requestForegroundPermissionsAsync();
-            if (status === "granted") {
-              setLocationEnabled(true);
-              setIsModalOpen(false);
-            }
+
+          // const { status: foregroundStatus } = await Location.requestForegroundPermissionsAsync();
+          // if (foregroundStatus === 'granted') {
+          //   const { status: backgroundStatus } = await Location.requestBackgroundPermissionsAsync();
+          //   if (backgroundStatus === 'granted') {
+          //     await Location.startLocationUpdatesAsync(LOCATION_TASK_NAME, {
+          //       accuracy: Location.Accuracy.Balanced,
+          //     });
+          //   }
+          // }
+
+          
+          const { status } = await Location.requestForegroundPermissionsAsync();
+          if (status === "granted") {
+            setLocationEnabled(true);
+            setIsModalOpen(false);
+          }
+            
+            
         }
     }
 
@@ -36,29 +53,33 @@ const PermissionsModal = ({
             <ParagraphText style={styles.text}>
               The Universal Studios On the Lot application works better with
               location on. Location allow you to easily search for key locations
-              on the Universal Studios Lot.
+              on the Universal Studios Lot when using the app. Data will not be collected in the background.
             </ParagraphText>
           </Modal.Body>
           <Modal.Footer>
             <View
               style={{
                 backgroundColor: Colors.dark.creamBg,
+                flex: 1,
+                flexDirection: "row",
+                justifyContent: "center",
               }}
             >
-              <TouchableOpacity
-                onPress={() => handleButtonPress(true)}
-                style={styles.buttonStyles}
-              >
-                <HeadingBoldText style={styles.btnTxt}>
-                  Allow Location
-                </HeadingBoldText>
-              </TouchableOpacity>
+             
               <TouchableOpacity
                 style={styles.buttonWrapper}
                 onPress={() => setIsModalOpen(false)}
               >
                 <HeadingBoldText style={styles.shareHeading}>
-                  Cancel
+                  Deny
+                </HeadingBoldText>
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => handleButtonPress(true)}
+                style={styles.buttonStyles}
+              >
+                <HeadingBoldText style={styles.btnTxt}>
+                  Accept
                 </HeadingBoldText>
               </TouchableOpacity>
             </View>
@@ -67,6 +88,18 @@ const PermissionsModal = ({
       </Modal>
     );
 };
+
+TaskManager.defineTask(LOCATION_TASK_NAME, ({ data, error }) => {
+  if (error) {
+    throw new Error(error.message);
+    // Error occurred - check `error.message` for more details.
+    return;
+  }
+  if (data) {
+    console.log(data);
+    // do something with the locations captured in the background
+  }
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -103,6 +136,7 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     paddingVertical: 10,
+    marginRight: 50,
     textAlign: "center",
     color: Colors.dark.greyText,
   },
