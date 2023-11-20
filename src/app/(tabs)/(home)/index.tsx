@@ -13,6 +13,7 @@ import { Text, View } from "../../../components/Themed";
 import Colors from "../../../constants/Colors";
 import { HeadingMediumText } from "../../../components/StyledText";
 import PermissionsModal from "../../../components/Modals/PermissionsModal";
+import { logObject } from "../../../utils/helpers";
 
 interface ItemData {
   key: string;
@@ -121,14 +122,11 @@ export default function HomeScreen() {
     useEffect(() => {
       (async () => {
         const { granted } = await Location.getForegroundPermissionsAsync();
-        // const { granted: bgGranted } = await Location.getBackgroundPermissionsAsync();
-      
         if (!granted && setLocationEnabled && setIsModalOpen) {
           setLocationEnabled(false);
           setIsModalOpen(true);
         }
       })();
-      // const t = Location.getForegroundPermissionsAsync().then((res) => {});
     }, []);
 
   return (
@@ -141,7 +139,7 @@ export default function HomeScreen() {
         )}
         keyExtractor={(item) => item.key}
       />
-      <PermissionsModal locationEnabled={locationEnabled} setLocationEnabled={setLocationEnabled} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <PermissionsModal  locationEnabled={locationEnabled} setLocationEnabled={setLocationEnabled} isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </View>
   );
 }

@@ -13,6 +13,7 @@ const PermissionsModal = ({
   setLocationEnabled,
   isModalOpen,
   setIsModalOpen,
+  
 }: AppContextProps) => {
 
     const handleButtonPress = async (requestAccess = true) => {
@@ -51,9 +52,7 @@ const PermissionsModal = ({
           </Modal.Header>
           <Modal.Body>
             <ParagraphText style={styles.text}>
-              The Universal Studios On the Lot application works better with
-              location on. Location allow you to easily search for key locations
-              on the Universal Studios Lot when using the app. Data will not be collected in the background.
+              The On The Lot App collects location data to enable the user location, map, directions, & distance even when the app is closed or not in use. This data is only used for the On The Lot App and is not shared with any third parties.
             </ParagraphText>
           </Modal.Body>
           <Modal.Footer>
@@ -65,7 +64,6 @@ const PermissionsModal = ({
                 justifyContent: "center",
               }}
             >
-             
               <TouchableOpacity
                 style={styles.buttonWrapper}
                 onPress={() => setIsModalOpen(false)}

@@ -10,7 +10,7 @@
       "android"
     ],
     "sdkVersion": "49.0.0",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "icon": "./src/assets/images/LK-UniversalLot-OnTheLot-icon.png",
@@ -53,22 +53,22 @@
     "description": "V15\n",
     "android": {
       "package": "com.nbcuni.nbcsports.onthelot",
-      "versionCode": 35,
-      // "permissions": [
-      //   "ACCESS_COARSE_LOCATION",
-      //   "ACCESS_FINE_LOCATION",
-      //   "FOREGROUND_SERVICE",
-      //   "android.permission.ACCESS_COARSE_LOCATION",
-      //   "android.permission.ACCESS_FINE_LOCATION",
-      //   "android.permission.FOREGROUND_SERVICE"
-      // ],
+      "versionCode": 38,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ],
       "blockedPermissions": [
+        "ACCESS_BACKGROUND_LOCATION",
         "READ_PHONE_STATE",
         "WRITE_EXTERNAL_STORAGE",
         "READ_EXTERNAL_STORAGE",
         "READ_LOGS",
         "CAMERA",
-        "ACCESS_BACKGROUND_LOCATION",
         "ACCESS_MEDIA_LOCATION",
         "READ_CONTACTS",
         "RECORD_AUDIO",
@@ -117,11 +117,11 @@
       [
         "expo-location",
         {
-          "isIosBackgroundLocationEnabled": true,
+          "isAndroidBackgroundLocationEnabled": false,
+          "isIosBackgroundLocationEnabled": false,
           "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
           "locationAlwaysPermission": "Allow $(PRODUCT_NAME) to use your location.",
-          "locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
-          "isAndroidBackgroundLocationEnabled": false
+          "locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
         }
       ],
       [

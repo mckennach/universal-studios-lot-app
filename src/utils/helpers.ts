@@ -1,4 +1,4 @@
-import { Text } from "@/components/Themed";
+// import { Text } from "@/components/Themed";
 
 export const logObject = (label = "Output", obj: any) => {
     console.log(label, JSON.stringify(obj, null, 2));

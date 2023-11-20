@@ -16,6 +16,7 @@ import { Ionicons } from "@expo/vector-icons";
 import CustomTheme from "../constants/Theme";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
+import { initial } from "lodash";
 // import { AppContext } from "@/utils/types/context";
 
 export {
@@ -32,6 +33,7 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 export interface AppContextProps {
+ 
   locationEnabled: boolean;
   setLocationEnabled: (locationEnabled: boolean) => void;
   isModalOpen: boolean;
@@ -39,6 +41,7 @@ export interface AppContextProps {
 }
 
 export const AppContext = createContext<AppContextProps>({
+
   locationEnabled: false,
   setLocationEnabled: () => {},
   isModalOpen: false,
@@ -48,11 +51,13 @@ export const AppContext = createContext<AppContextProps>({
 export default function RootLayout() {
   const [locationEnabled, setLocationEnabled] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [initialPromptFired, setInitialPromptFired] = useState<boolean>(false);
   const globalState = { 
     locationEnabled, 
     setLocationEnabled, 
     isModalOpen, 
-    setIsModalOpen };
+    setIsModalOpen
+    };
   const [loaded, error] = useFonts({
     ...FontAwesome.font,
     ...Ionicons.font,
@@ -66,8 +71,6 @@ export default function RootLayout() {
     SpaceMone: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
 
-
-  
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
@@ -88,7 +91,7 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav({ globalState }: any) {
-
+  console.log(globalState);
   return (
     <SafeAreaProvider>
       <AppContext.Provider value={globalState}>
