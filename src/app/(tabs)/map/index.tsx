@@ -27,28 +27,33 @@ export default function MapScreen() {
   const app = useContext<AppContextProps>(AppContext);
   const { locationEnabled, setLocationEnabled, isModalOpen, setIsModalOpen } = app;
   const [data, setData] = useState<LocationProps[] | null>(null);
-  
-  
+  const [isBgGranted, setIsBgGranted] = useState<boolean>(false);
+  const [isFgGranted, setIsFgGranted] = useState<boolean>(false);
 
   useEffect(() => {
 
     (async () => {
-      const { granted } = await Location.getForegroundPermissionsAsync();
-      const { granted: bgGranted } = await Location.getBackgroundPermissionsAsync();
-      const test = await Location.isBackgroundLocationAvailableAsync();
-      if(granted && bgGranted && locationEnabled) {
-        fetchData().then((data) => {
-          setData(data?.data);
-        });
-      } else {
-        setIsModalOpen(true);
-      }
+    
+        const { granted } = await Location.getForegroundPermissionsAsync();
+        const { granted: bgGranted } = await Location.getBackgroundPermissionsAsync();
+        const test = await Location.isBackgroundLocationAvailableAsync();
+   
+        if(granted && locationEnabled) {
+          fetchData().then((data) => {
+            setData(data?.data);
+          });
+        } else {
+          setLocationEnabled(false);
+          setIsModalOpen(true);
+        }
+      
+     
     })();
 
-  }, [locationEnabled]);
+  }, [locationEnabled, isBgGranted, isFgGranted]);
 
-  console.log(locationEnabled);
-
+ 
+  
   if(!locationEnabled) return (
     <>
       <MapDisabled

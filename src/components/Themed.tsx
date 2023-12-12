@@ -62,7 +62,7 @@ export function Modal(props: ModalProps) {
       swipeDirection="up"
       coverScreen={true}
       deviceWidth={Layout.window.width}
-      deviceHeight={Layout.window.height}
+      deviceHeight={Layout.window.height + 400}
       animationInTiming={1000}
       animationOutTiming={1000}
       backdropTransitionInTiming={800}

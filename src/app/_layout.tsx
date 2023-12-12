@@ -91,7 +91,7 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav({ globalState }: any) {
-  console.log(globalState);
+  
   return (
     <SafeAreaProvider>
       <AppContext.Provider value={globalState}>

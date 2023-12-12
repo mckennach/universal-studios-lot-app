@@ -118,14 +118,16 @@ export default function HomeScreen() {
   const pathname = usePathname();
     const app = useContext<AppContextProps>(AppContext);
     const {locationEnabled, setLocationEnabled, isModalOpen, setIsModalOpen } = app;
-    // console.log(locationEnabled);
+    
     useEffect(() => {
       (async () => {
         const { granted } = await Location.getForegroundPermissionsAsync();
+        console.log("granted1", granted);
+        const { granted: bgGranted, status: bgStatus } = await Location.getBackgroundPermissionsAsync();
         if (!granted && setLocationEnabled && setIsModalOpen) {
           setLocationEnabled(false);
           setIsModalOpen(true);
-        }
+        } 
       })();
     }, []);
 

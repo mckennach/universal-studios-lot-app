@@ -5,6 +5,7 @@ import * as TaskManager from 'expo-task-manager';
 import { AppContextProps } from "../../app/_layout";
 import { View, Text, Modal } from "../Themed";
 import { HeadingBoldText, ParagraphText } from "../StyledText";
+import { useEffect } from "react";
 
 const LOCATION_TASK_NAME = 'background-location-task';
 
@@ -16,28 +17,34 @@ const PermissionsModal = ({
   
 }: AppContextProps) => {
 
-    const handleButtonPress = async (requestAccess = true) => {
-        if(requestAccess) {
 
-          // const { status: foregroundStatus } = await Location.requestForegroundPermissionsAsync();
-          // if (foregroundStatus === 'granted') {
-          //   const { status: backgroundStatus } = await Location.requestBackgroundPermissionsAsync();
-          //   if (backgroundStatus === 'granted') {
-          //     await Location.startLocationUpdatesAsync(LOCATION_TASK_NAME, {
-          //       accuracy: Location.Accuracy.Balanced,
-          //     });
-          //   }
-          // }
-
-          
-          const { status } = await Location.requestForegroundPermissionsAsync();
-          if (status === "granted") {
-            setLocationEnabled(true);
-            setIsModalOpen(false);
-          }
-            
-            
+    useEffect(() => {
+      (async () => {
+        const { status: foregroundStatus } = await Location.getForegroundPermissionsAsync();
+        const { status: backgroundStatus } = await Location.getBackgroundPermissionsAsync();
+        if(foregroundStatus === 'granted') {
+          setLocationEnabled(true);
+          setIsModalOpen(false);
         }
+      })();
+    }, [locationEnabled]);
+
+    const handleButtonPress = async (requestAccess = true) => {
+        
+          const { status: foregroundStatus } = await Location.requestForegroundPermissionsAsync();
+          if (foregroundStatus === 'granted') {
+            const { status: backgroundStatus  } = await Location.requestBackgroundPermissionsAsync();
+            setLocationEnabled(true);
+            if (backgroundStatus === 'granted') {
+              setIsModalOpen(false);
+              await Location.startLocationUpdatesAsync(LOCATION_TASK_NAME, {
+                accuracy: Location.Accuracy.Balanced,
+              });
+            } else {
+              setIsModalOpen(true);
+            }
+          }
+      
     }
 
     return (
@@ -87,14 +94,14 @@ const PermissionsModal = ({
     );
 };
 
-TaskManager.defineTask(LOCATION_TASK_NAME, ({ data, error }) => {
+TaskManager.defineTask(LOCATION_TASK_NAME, ({ data, error }: any) => {
   if (error) {
     throw new Error(error.message);
     // Error occurred - check `error.message` for more details.
     return;
   }
   if (data) {
-    console.log(data);
+    console.log(data, 'here');
     // do something with the locations captured in the background
   }
 });

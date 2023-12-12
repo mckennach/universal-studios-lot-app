@@ -16,8 +16,8 @@ const MapDisabled = ({
   const handleButtonPress = async (requestAccess = true) => {
       if (requestAccess) {
         const { status, canAskAgain } = await Location.requestForegroundPermissionsAsync();
-        
-        if (status === "granted") {
+        const { status: bgStatus } = await Location.requestBackgroundPermissionsAsync();
+        if (status === "granted" && bgStatus === "granted") {
           setLocationEnabled(true);
           setIsModalOpen(false);
         }

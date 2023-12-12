@@ -8,7 +8,7 @@ import {
   Platform,
   Text
 } from "react-native";
-import { Route, router, Href, Link, Redirect, usePathname } from "expo-router";
+import { router, usePathname } from "expo-router";
 import Layout from "../../../../constants/Layout";
 // import OneTrustModal from "../../../../components/Modals/OneTrustModal";
 import Colors from "../../../../constants/Colors";
@@ -99,8 +99,10 @@ export default function PrivacyScreen() {
     const id = Platform.OS === "ios" ? EXPO_PUBLIC_ONETRUST_IOS : EXPO_PUBLIC_ONETRUST_ANDROID;
     setOneTrustId(id as string);
     OTPublishersNativeSDK.startSDK(
-      EXPO_PUBLIC_ONETRUST_DOMAIN as string,
-      id as string,
+      "cdn.cookielaw.org",
+      "8b57ff1f-5695-4471-8d2e-cc39b13191af-test",
+      // EXPO_PUBLIC_ONETRUST_DOMAIN as string,
+      // id as string,
       "en",
       {
         countryCode: "US",

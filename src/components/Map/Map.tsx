@@ -33,7 +33,7 @@ import LocationDetails from "./LocationDetails";
 
 const Map = ({ data, activeData }: { data: LocationProps[] | null, activeData?: LocationProps | null }) => {
 
-  console.log('HELLO!');
+
   
   const ASPECT_RATIO = Layout.window.width / Layout.window.height;
   const LATITUDE_DELTA = 0.035;
