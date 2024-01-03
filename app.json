@@ -1,0 +1,158 @@
+{
+  "expo": {
+    "owner": "lkexpo",
+    "name": "Universal On The Lot",
+    "slug": "universal",
+    "scheme": "universal",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "sdkVersion": "49.0.0",
+    "version": "1.5.3",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./src/assets/images/LK-UniversalLot-OnTheLot-icon.png",
+    "splash": {
+      "image": "./src/assets/images/loading-screen-3.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#343434"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "androidStatusBar": {
+      "translucent": true,
+      "backgroundColor": "#343434"
+    },
+    "jsEngine": "hermes",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nbcuni.nbcsports.onthelot",
+      "buildNumber": "1.5.3",
+      "infoPlist": {
+        "NSCameraUsageDescription": "App requires camera access to improve the quality of the service",
+        "UIRequiresFullScreen": true,
+        "NSWidgetWantsLocation": true,
+        "NSLocationDefaultAccuracyReduced": true,
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "App requires geolocation to improve the quality of the service",
+        "NSLocationAlwaysUsageDescription": "App requires geolocation to improve the quality of the service",
+        "NSLocationWhenInUseUsageDescription": "App requires geolocation to improve the quality of the service",
+        "NSLocationUsageDescription": "App requires geolocation to improve the quality of the service"
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k"
+      }
+    },
+    "description": "V15\n",
+    "android": {
+      "package": "com.nbcuni.nbcsports.onthelot",
+      "versionCode": 46,
+      "permissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ], 
+      "blockedPermissions": [
+        "READ_PHONE_STATE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE",
+        "READ_LOGS",
+        "CAMERA",
+        "ACCESS_MEDIA_LOCATION",
+        "READ_CONTACTS",
+        "RECORD_AUDIO",
+        "SYSTEM_ALERT_WINDOW",
+        "CAMERA",
+        "WRITE_CALENDAR",
+        "WRITE_SETTINGS",
+        "ACTIVITY_RECOGNITION",
+        "ACCESS_MEDIA_LOCATION",
+        "ADD_VOICEMAIL"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCvgzlIVC_hu6XD0SOu0NUM4jvEOneo4s0"
+        }
+      }
+    },
+    "extra": {
+      "API_URL": "https://www.universalstudioslot.com",
+      "eas": {
+        "projectId": "90ef57e0-3937-11e9-aabf-b34201154ba8"
+      },
+      "DIRECTIONS_KEY": "AIzaSyAatF6UjKOqASa3H_W5c1UpFPtiq6f1LZI",
+      "IOS_MAP_KEY": "AIzaSyDV3gaXsQYiEz21fr15bOgcBT67-h1uC6k",
+      "ANDROID_MAP_KEY": "AIzaSyCvgzlIVC_hu6XD0SOu0NUM4jvEOneo4s0",
+      "ONETRUST_IOS": "40898be3-024d-4820-a4c5-a5ab03228db3-test",
+      "ONETRUST_ANDROID": "8b57ff1f-5695-4471-8d2e-cc39b13191af-test",
+      "ONETRUST_DOMAIN": "cdn.cookielaw.org",
+      "ONETRUST_VERSION": "^202308.2.0"
+    },
+    "plugins": [
+      [
+        "@config-plugins/react-native-webrtc",
+        [
+          "expo-onetrust/index",
+          "custom"
+        ]
+      ],
+      [
+        "expo-updates",
+        {
+          "username": "mckennach"
+        }
+      ],
+      [
+        "expo-router",
+        {
+          "origin": "https://acme.com",
+          "asyncRoutes": "development"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "isAndroidBackgroundLocationEnabled": false,
+          "isIosBackgroundLocationEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
+          "locationAlwaysPermission": "Allow $(PRODUCT_NAME) to use your location.",
+          "locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "flipper": true
+          },
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "34.0.0"
+          }
+        }
+      ],
+      "expo-localization"
+    ]
+  }
+}
